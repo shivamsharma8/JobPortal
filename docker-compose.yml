@@ -1,0 +1,193 @@
+version: "3.9"
+
+services:
+  # ─── Infrastructure ──────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: hireconnect-postgres
+    environment:
+      POSTGRES_USER: hireconnect
+      POSTGRES_PASSWORD: hireconnect_secret
+      POSTGRES_DB: hireconnect
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hireconnect"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hireconnect-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: hireconnect-redis
+    command: redis-server --requirepass hireconnect_redis_pass
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "hireconnect_redis_pass", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hireconnect-net
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    container_name: hireconnect-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: hireconnect
+      RABBITMQ_DEFAULT_PASS: hireconnect_rabbit_pass
+      RABBITMQ_DEFAULT_VHOST: hireconnect
+    ports:
+      - "5672:5672"
+      - "15672:15672"   # Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+    networks:
+      - hireconnect-net
+
+  # ─── Microservices ────────────────────────────────────────────────────────────
+  auth-service:
+    build:
+      context: .
+      dockerfile: src/Services/AuthService/Dockerfile
+    container_name: hireconnect-auth
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__AuthDb=Host=postgres;Port=5432;Database=auth_db;Username=hireconnect;Password=hireconnect_secret;
+      - ConnectionStrings__Redis=redis:6379,password=hireconnect_redis_pass
+      - JwtSettings__SecretKey=HireConnect_SuperSecretKey_Must_Be_At_Least_32_Chars!
+      - JwtSettings__Issuer=hireconnect-auth-service
+      - JwtSettings__Audience=hireconnect-clients
+      - JwtSettings__AccessTokenExpiryMinutes=60
+      - JwtSettings__RefreshTokenExpiryDays=7
+      - GitHub__ClientId=${GITHUB_CLIENT_ID}
+      - GitHub__ClientSecret=${GITHUB_CLIENT_SECRET}
+    ports:
+      - "5001:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+    networks:
+      - hireconnect-net
+    restart: unless-stopped
+
+  profile-service:
+    build:
+      context: .
+      dockerfile: src/Services/ProfileService/Dockerfile
+    container_name: hireconnect-profile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__ProfileDb=Host=postgres;Port=5432;Database=profile_db;Username=hireconnect;Password=hireconnect_secret;
+      - ConnectionStrings__Redis=redis:6379,password=hireconnect_redis_pass
+      - JwtSettings__SecretKey=HireConnect_SuperSecretKey_Must_Be_At_Least_32_Chars!
+      - JwtSettings__Issuer=hireconnect-auth-service
+      - JwtSettings__Audience=hireconnect-clients
+      - JwtSettings__AccessTokenExpiryMinutes=60
+      - Storage__LocalBasePath=/app/storage
+    ports:
+      - "5002:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - profile_storage:/app/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+    networks:
+      - hireconnect-net
+    restart: unless-stopped
+
+  job-service:
+    build:
+      context: .
+      dockerfile: src/Services/JobService/Dockerfile
+    container_name: hireconnect-job
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__JobDb=Host=postgres;Port=5432;Database=job_db;Username=hireconnect;Password=hireconnect_secret;
+      - ConnectionStrings__Redis=redis:6379,password=hireconnect_redis_pass
+      - JwtSettings__SecretKey=HireConnect_SuperSecretKey_Must_Be_At_Least_32_Chars!
+      - JwtSettings__Issuer=hireconnect-auth-service
+      - JwtSettings__Audience=hireconnect-clients
+      - JwtSettings__AccessTokenExpiryMinutes=60
+    ports:
+      - "5003:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+    networks:
+      - hireconnect-net
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: .
+      dockerfile: src/Gateway/HireConnect.Gateway/Dockerfile
+    container_name: hireconnect-gateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ReverseProxy__Clusters__auth-cluster__Destinations__auth-service__Address=http://auth-service:8080/
+      - ReverseProxy__Clusters__profile-cluster__Destinations__profile-service__Address=http://profile-service:8080/
+      - ReverseProxy__Clusters__job-cluster__Destinations__job-service__Address=http://job-service:8080/
+    ports:
+      - "5010:5000"
+    depends_on:
+      - auth-service
+      - profile-service
+      - job-service
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+    networks:
+      - hireconnect-net
+    restart: unless-stopped
+
+# ─── Volumes ──────────────────────────────────────────────────────────────────
+volumes:
+  postgres_data:
+  redis_data:
+  rabbitmq_data:
+  profile_storage:
+
+# ─── Networks ─────────────────────────────────────────────────────────────────
+networks:
+  hireconnect-net:
+    driver: bridge

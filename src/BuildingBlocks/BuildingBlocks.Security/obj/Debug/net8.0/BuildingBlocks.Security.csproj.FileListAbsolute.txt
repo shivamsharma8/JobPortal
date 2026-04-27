@@ -1,0 +1,15 @@
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/bin/Debug/net8.0/BuildingBlocks.Security.deps.json
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/bin/Debug/net8.0/BuildingBlocks.Security.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/bin/Debug/net8.0/BuildingBlocks.Security.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/bin/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/bin/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/BuildingBlocks.Security.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/BuildingBlocks.Security.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/BuildingBlocks.Security.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/BuildingBlocks.Security.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/BuildingBlocks.Security.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/Building.D8C7676A.Up2Date
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/BuildingBlocks.Security.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/refint/BuildingBlocks.Security.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/BuildingBlocks.Security.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/Debug/net8.0/ref/BuildingBlocks.Security.dll

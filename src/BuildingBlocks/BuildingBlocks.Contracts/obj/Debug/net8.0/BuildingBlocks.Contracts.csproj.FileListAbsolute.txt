@@ -1,0 +1,12 @@
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/bin/Debug/net8.0/BuildingBlocks.Contracts.deps.json
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/bin/Debug/net8.0/BuildingBlocks.Contracts.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/bin/Debug/net8.0/BuildingBlocks.Contracts.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/BuildingBlocks.Contracts.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/BuildingBlocks.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/BuildingBlocks.Contracts.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/BuildingBlocks.Contracts.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/BuildingBlocks.Contracts.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/BuildingBlocks.Contracts.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/refint/BuildingBlocks.Contracts.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/BuildingBlocks.Contracts.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/Debug/net8.0/ref/BuildingBlocks.Contracts.dll

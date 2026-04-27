@@ -1,0 +1,15 @@
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/bin/Debug/net8.0/JobService.Domain.deps.json
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/bin/Debug/net8.0/JobService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/bin/Debug/net8.0/JobService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobService.Domain.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobService.Domain.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobService.Domain.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobService.Domain.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobServi.6C728BD0.Up2Date
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/refint/JobService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/JobService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Domain/obj/Debug/net8.0/ref/JobService.Domain.dll
