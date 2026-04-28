@@ -756,11 +756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj",
+      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj",
       "projectName": "BuildingBlocks.Security",
-      "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj",
+      "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj",
       "packagesPath": "/Users/shivamsharma/.nuget/packages/",
-      "outputPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/",
+      "outputPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shivamsharma/.nuget/NuGet/NuGet.Config"
@@ -775,8 +775,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
             }
           }
         }

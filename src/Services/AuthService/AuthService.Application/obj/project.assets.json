@@ -1374,11 +1374,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/AuthService/AuthService.Application/AuthService.Application.csproj",
+      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AuthService/AuthService.Application/AuthService.Application.csproj",
       "projectName": "AuthService.Application",
-      "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/AuthService/AuthService.Application/AuthService.Application.csproj",
+      "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AuthService/AuthService.Application/AuthService.Application.csproj",
       "packagesPath": "/Users/shivamsharma/.nuget/packages/",
-      "outputPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/AuthService/AuthService.Application/obj/",
+      "outputPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AuthService/AuthService.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shivamsharma/.nuget/NuGet/NuGet.Config"
@@ -1393,17 +1393,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/AuthService/AuthService.Domain/AuthService.Domain.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/AuthService/AuthService.Domain/AuthService.Domain.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AuthService/AuthService.Domain/AuthService.Domain.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AuthService/AuthService.Domain/AuthService.Domain.csproj"
             }
           }
         }

@@ -154,6 +154,84 @@ services:
       - hireconnect-net
     restart: unless-stopped
 
+  application-service:
+    build:
+      context: .
+      dockerfile: src/Services/ApplicationService/ApplicationService.API/Dockerfile
+    container_name: hireconnect-application
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__ApplicationDb=Host=postgres;Port=5432;Database=application_db;Username=hireconnect;Password=hireconnect_secret;
+      - Services__JobServiceBaseUrl=http://job-service:8080/
+      - RabbitMq__Enabled=true
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+      - RabbitMq__UserName=hireconnect
+      - RabbitMq__Password=hireconnect_rabbit_pass
+      - RabbitMq__VirtualHost=hireconnect
+      - RabbitMq__ExchangeName=hireconnect.events
+      - JwtSettings__SecretKey=HireConnect_SuperSecretKey_Must_Be_At_Least_32_Chars!
+      - JwtSettings__Issuer=hireconnect-auth-service
+      - JwtSettings__Audience=hireconnect-clients
+      - JwtSettings__AccessTokenExpiryMinutes=60
+    ports:
+      - "5004:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      job-service:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+    networks:
+      - hireconnect-net
+    restart: unless-stopped
+
+  interview-service:
+    build:
+      context: .
+      dockerfile: src/Services/InterviewService/InterviewService.API/Dockerfile
+    container_name: hireconnect-interview
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__InterviewDb=Host=postgres;Port=5432;Database=interview_db;Username=hireconnect;Password=hireconnect_secret;
+      - Services__ApplicationServiceBaseUrl=http://application-service:8080/
+      - RabbitMq__Enabled=true
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+      - RabbitMq__UserName=hireconnect
+      - RabbitMq__Password=hireconnect_rabbit_pass
+      - RabbitMq__VirtualHost=hireconnect
+      - RabbitMq__ExchangeName=hireconnect.events
+      - JwtSettings__SecretKey=HireConnect_SuperSecretKey_Must_Be_At_Least_32_Chars!
+      - JwtSettings__Issuer=hireconnect-auth-service
+      - JwtSettings__Audience=hireconnect-clients
+      - JwtSettings__AccessTokenExpiryMinutes=60
+    ports:
+      - "5005:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      application-service:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 40s
+      retries: 3
+    networks:
+      - hireconnect-net
+    restart: unless-stopped
+
   gateway:
     build:
       context: .
@@ -170,6 +248,8 @@ services:
       - auth-service
       - profile-service
       - job-service
+      - application-service
+      - interview-service
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s

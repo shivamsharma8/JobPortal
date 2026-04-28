@@ -811,11 +811,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj",
+      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj",
       "projectName": "BuildingBlocks.Contracts",
-      "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj",
+      "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj",
       "packagesPath": "/Users/shivamsharma/.nuget/packages/",
-      "outputPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/",
+      "outputPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shivamsharma/.nuget/NuGet/NuGet.Config"

@@ -794,11 +794,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/ProfileService/ProfileService.Application/ProfileService.Application.csproj",
+      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ProfileService/ProfileService.Application/ProfileService.Application.csproj",
       "projectName": "ProfileService.Application",
-      "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/ProfileService/ProfileService.Application/ProfileService.Application.csproj",
+      "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ProfileService/ProfileService.Application/ProfileService.Application.csproj",
       "packagesPath": "/Users/shivamsharma/.nuget/packages/",
-      "outputPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/ProfileService/ProfileService.Application/obj/",
+      "outputPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ProfileService/ProfileService.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shivamsharma/.nuget/NuGet/NuGet.Config"
@@ -813,14 +813,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/ProfileService/ProfileService.Domain/ProfileService.Domain.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/ProfileService/ProfileService.Domain/ProfileService.Domain.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ProfileService/ProfileService.Domain/ProfileService.Domain.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ProfileService/ProfileService.Domain/ProfileService.Domain.csproj"
             }
           }
         }

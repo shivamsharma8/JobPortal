@@ -1343,11 +1343,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Gateway/HireConnect.Gateway/HireConnect.Gateway.csproj",
+      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Gateway/HireConnect.Gateway/HireConnect.Gateway.csproj",
       "projectName": "HireConnect.Gateway",
-      "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Gateway/HireConnect.Gateway/HireConnect.Gateway.csproj",
+      "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Gateway/HireConnect.Gateway/HireConnect.Gateway.csproj",
       "packagesPath": "/Users/shivamsharma/.nuget/packages/",
-      "outputPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Gateway/HireConnect.Gateway/obj/",
+      "outputPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Gateway/HireConnect.Gateway/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shivamsharma/.nuget/NuGet/NuGet.Config"

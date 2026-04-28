@@ -10,3 +10,16 @@
 /Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/refint/BuildingBlocks.Common.dll
 /Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.pdb
 /Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/ref/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/bin/Debug/net8.0/BuildingBlocks.Common.deps.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/bin/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/bin/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.sourcelink.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/refint/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/obj/Debug/net8.0/ref/BuildingBlocks.Common.dll

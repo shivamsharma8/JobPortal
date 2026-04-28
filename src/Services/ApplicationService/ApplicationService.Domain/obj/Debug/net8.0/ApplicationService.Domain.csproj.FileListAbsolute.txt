@@ -1,0 +1,16 @@
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/bin/Debug/net8.0/ApplicationService.Domain.deps.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/bin/Debug/net8.0/ApplicationService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/bin/Debug/net8.0/ApplicationService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.sourcelink.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/Applicat.C79C3EE1.Up2Date
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/refint/ApplicationService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ApplicationService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/ApplicationService/ApplicationService.Domain/obj/Debug/net8.0/ref/ApplicationService.Domain.dll

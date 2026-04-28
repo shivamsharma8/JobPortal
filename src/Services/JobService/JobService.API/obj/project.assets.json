@@ -4311,11 +4311,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.API/JobService.API.csproj",
+      "projectUniqueName": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/JobService.API.csproj",
       "projectName": "JobService.API",
-      "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.API/JobService.API.csproj",
+      "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/JobService.API.csproj",
       "packagesPath": "/Users/shivamsharma/.nuget/packages/",
-      "outputPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.API/obj/",
+      "outputPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shivamsharma/.nuget/NuGet/NuGet.Config"
@@ -4330,20 +4330,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Common/BuildingBlocks.Common.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Contracts/BuildingBlocks.Contracts.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/BuildingBlocks/BuildingBlocks.Security/BuildingBlocks.Security.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Application/JobService.Application.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Application/JobService.Application.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.Application/JobService.Application.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.Application/JobService.Application.csproj"
             },
-            "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Infrastructure/JobService.Infrastructure.csproj": {
-              "projectPath": "/Users/shivamsharma/Desktop/JobPortal/JobPortal/src/Services/JobService/JobService.Infrastructure/JobService.Infrastructure.csproj"
+            "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.Infrastructure/JobService.Infrastructure.csproj": {
+              "projectPath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.Infrastructure/JobService.Infrastructure.csproj"
             }
           }
         }

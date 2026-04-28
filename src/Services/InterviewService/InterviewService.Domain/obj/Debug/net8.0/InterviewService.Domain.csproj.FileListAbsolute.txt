@@ -1,0 +1,16 @@
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/bin/Debug/net8.0/InterviewService.Domain.deps.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/bin/Debug/net8.0/InterviewService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/bin/Debug/net8.0/InterviewService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.sourcelink.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/Intervie.FD184C9B.Up2Date
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/refint/InterviewService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/InterviewService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/InterviewService/InterviewService.Domain/obj/Debug/net8.0/ref/InterviewService.Domain.dll
