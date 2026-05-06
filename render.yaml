@@ -6,22 +6,21 @@ databases:
     user: hireconnect
     plan: free
 
-# ─── Redis ────────────────────────────────────────────────────────────────────
-
-redises:
-  - name: hireconnect-redis
-    plan: free
-    ipAllowList: []
-
 # ─── Services ─────────────────────────────────────────────────────────────────
 
 services:
+  # Managed Redis
+  - type: redis
+    name: hireconnect-redis
+    plan: free
+    ipAllowList: []
+
   # RabbitMQ Docker service
   - type: web
     name: rabbitmq
     env: docker
     plan: free
-    dockerFilePath: Dockerfile.rabbitmq
+    dockerfilePath: Dockerfile.rabbitmq
     healthCheckPath: /
     envVars:
       - key: RABBITMQ_DEFAULT_USER
@@ -33,7 +32,7 @@ services:
     name: auth-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/AuthService/AuthService.API/Dockerfile
+    dockerfilePath: src/Services/AuthService/AuthService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__AuthDb
@@ -49,7 +48,7 @@ services:
     name: profile-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/ProfileService/ProfileService.API/Dockerfile
+    dockerfilePath: src/Services/ProfileService/ProfileService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__ProfileDb
@@ -61,7 +60,7 @@ services:
     name: job-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/JobService/JobService.API/Dockerfile
+    dockerfilePath: src/Services/JobService/JobService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__JobDb
@@ -79,7 +78,7 @@ services:
     name: application-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/ApplicationService/ApplicationService.API/Dockerfile
+    dockerfilePath: src/Services/ApplicationService/ApplicationService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__ApplicationDb
@@ -93,7 +92,7 @@ services:
     name: interview-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/InterviewService/InterviewService.API/Dockerfile
+    dockerfilePath: src/Services/InterviewService/InterviewService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__InterviewDb
@@ -107,7 +106,7 @@ services:
     name: notification-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/NotificationService/NotificationService.API/Dockerfile
+    dockerfilePath: src/Services/NotificationService/NotificationService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__NotificationDb
@@ -121,7 +120,7 @@ services:
     name: subscription-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/SubscriptionService/SubscriptionService.API/Dockerfile
+    dockerfilePath: src/Services/SubscriptionService/SubscriptionService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__SubscriptionDb
@@ -133,7 +132,7 @@ services:
     name: analytics-service
     env: docker
     dockerContext: .
-    dockerFilePath: src/Services/AnalyticsService/AnalyticsService.API/Dockerfile
+    dockerfilePath: src/Services/AnalyticsService/AnalyticsService.API/Dockerfile
     plan: free
     envVars:
       - key: ConnectionStrings__AnalyticsDb
@@ -151,7 +150,7 @@ services:
     name: gateway
     env: docker
     dockerContext: .
-    dockerFilePath: src/Gateway/HireConnect.Gateway/Dockerfile
+    dockerfilePath: src/Gateway/HireConnect.Gateway/Dockerfile
     plan: free
     envVars:
       - key: ReverseProxy__Clusters__auth-cluster__Destinations__destination1__Address
@@ -175,7 +174,7 @@ services:
     name: web-ui
     env: docker
     dockerContext: .
-    dockerFilePath: src/Web/HireConnect.Web/Dockerfile
+    dockerfilePath: src/Web/HireConnect.Web/Dockerfile
     plan: free
     envVars:
       - key: GatewayUrl
