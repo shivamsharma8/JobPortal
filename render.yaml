@@ -1,32 +1,33 @@
-services:
-  # ─── Databases & Infrastructure ─────────────────────────────────────────────
-  
-  - type: database
-    name: hireconnect-db
+# ─── Databases ────────────────────────────────────────────────────────────────
+
+databases:
+  - name: hireconnect-db
     databaseName: hireconnect_db
     user: hireconnect
-    plan: free # Change to starter+ for production
-
-  - type: redis
-    name: hireconnect-redis
     plan: free
-    ipAllowList: [] # Only allow internal traffic
 
-  # Note: RabbitMQ is typically run as a Private Service or Docker service on Render.
-  # For production, consider an external provider like CloudAMQP.
+# ─── Redis ────────────────────────────────────────────────────────────────────
+
+redises:
+  - name: hireconnect-redis
+    plan: free
+    ipAllowList: []
+
+# ─── Services ─────────────────────────────────────────────────────────────────
+
+services:
+  # RabbitMQ Docker service
   - type: web
     name: rabbitmq
     env: docker
     plan: free
-    dockerFilePath: Dockerfile.rabbitmq # You'll need a simple Dockerfile for this or use an image
+    dockerFilePath: Dockerfile.rabbitmq
     healthCheckPath: /
     envVars:
       - key: RABBITMQ_DEFAULT_USER
         value: hireconnect
       - key: RABBITMQ_DEFAULT_PASS
         value: hireconnect_secret
-
-  # ─── Microservices ──────────────────────────────────────────────────────────
 
   - type: web
     name: auth-service
@@ -45,6 +46,18 @@ services:
         value: rabbitmq
 
   - type: web
+    name: profile-service
+    env: docker
+    dockerContext: .
+    dockerFilePath: src/Services/ProfileService/ProfileService.API/Dockerfile
+    plan: free
+    envVars:
+      - key: ConnectionStrings__ProfileDb
+        fromDatabase:
+          name: hireconnect-db
+          property: connectionString
+
+  - type: web
     name: job-service
     env: docker
     dockerContext: .
@@ -61,38 +74,6 @@ services:
           property: connectionString
       - key: RabbitMq__Hostname
         value: rabbitmq
-
-  - type: web
-    name: analytics-service
-    env: docker
-    dockerContext: .
-    dockerFilePath: src/Services/AnalyticsService/AnalyticsService.API/Dockerfile
-    plan: free
-    envVars:
-      - key: ConnectionStrings__AnalyticsDb
-        fromDatabase:
-          name: hireconnect-db
-          property: connectionString
-      - key: ConnectionStrings__Redis
-        fromRedis:
-          name: hireconnect-redis
-          property: connectionString
-      - key: RabbitMq__Hostname
-        value: rabbitmq
-
-  # ─── Gateway & Web UI ───────────────────────────────────────────────────────
-
-  - type: web
-    name: profile-service
-    env: docker
-    dockerContext: .
-    dockerFilePath: src/Services/ProfileService/ProfileService.API/Dockerfile
-    plan: free
-    envVars:
-      - key: ConnectionStrings__ProfileDb
-        fromDatabase:
-          name: hireconnect-db
-          property: connectionString
 
   - type: web
     name: application-service
@@ -147,6 +128,24 @@ services:
         fromDatabase:
           name: hireconnect-db
           property: connectionString
+
+  - type: web
+    name: analytics-service
+    env: docker
+    dockerContext: .
+    dockerFilePath: src/Services/AnalyticsService/AnalyticsService.API/Dockerfile
+    plan: free
+    envVars:
+      - key: ConnectionStrings__AnalyticsDb
+        fromDatabase:
+          name: hireconnect-db
+          property: connectionString
+      - key: ConnectionStrings__Redis
+        fromRedis:
+          name: hireconnect-redis
+          property: connectionString
+      - key: RabbitMq__Hostname
+        value: rabbitmq
 
   - type: web
     name: gateway
