@@ -27,7 +27,12 @@ builder.Services.AddDbContext<JobDbContext>(options =>
 
 builder.Services.AddStackExchangeRedisCache(options =>
 {
-    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    var redisConn = builder.Configuration.GetConnectionString("Redis");
+    if (redisConn != null && redisConn.StartsWith("redis://"))
+    {
+        redisConn = redisConn.Substring(8);
+    }
+    options.Configuration = redisConn;
     options.InstanceName = "JobService_";
 });
 
