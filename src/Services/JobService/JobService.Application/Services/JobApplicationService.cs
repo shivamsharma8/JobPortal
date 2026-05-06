@@ -1,3 +1,5 @@
+using System.Text.Json;
+using Microsoft.Extensions.Caching.Distributed;
 using BuildingBlocks.Common.Pagination;
 using BuildingBlocks.Common.Results;
 using JobService.Application.DTOs;
@@ -13,7 +15,8 @@ public class JobApplicationService(
     IJobCategoryRepository categoryRepository,
     IJobUnitOfWork unitOfWork,
     IJobSearchService searchService,
-    IJobEventPublisher eventPublisher)
+    IJobEventPublisher eventPublisher,
+    Microsoft.Extensions.Caching.Distributed.IDistributedCache cache)
 {
     public async Task<Result<JobResponse>> CreateJobAsync(
         Guid recruiterId, CreateJobRequest request, CancellationToken ct = default)
@@ -111,6 +114,13 @@ public class JobApplicationService(
     public async Task<Result<PagedResponse<JobResponse>>> SearchJobsAsync(
         JobSearchRequest request, CancellationToken ct = default)
     {
+        var cacheKey = $"search_jobs_{request.Q}_{request.Location}_{request.CategoryId}_{request.JobType}_{request.ExperienceLevel}_{request.PageNumber}_{request.PageSize}";
+        var cachedData = await cache.GetStringAsync(cacheKey, ct);
+        if (!string.IsNullOrEmpty(cachedData))
+        {
+            return Result.Success(JsonSerializer.Deserialize<PagedResponse<JobResponse>>(cachedData)!);
+        }
+
         JobType? jobType = null;
         ExperienceLevel? level = null;
 
@@ -126,6 +136,12 @@ public class JobApplicationService(
         var response = PagedResponse<JobResponse>.Create(
             items.Select(MapToResponse).ToList(),
             totalCount, request.PageNumber, request.PageSize);
+
+        await cache.SetStringAsync(
+            cacheKey, 
+            JsonSerializer.Serialize(response), 
+            new Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions { AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5) }, 
+            ct);
 
         return Result.Success(response);
     }

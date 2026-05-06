@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "u+Lxtrecmbw=",
+  "success": true,
+  "projectFilePath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Web/HireConnect.Web/HireConnect.Web.csproj",
+  "expectedPackageFiles": [
+    "/Users/shivamsharma/.nuget/packages/microsoft.identitymodel.abstractions/7.5.1/microsoft.identitymodel.abstractions.7.5.1.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.5.1/microsoft.identitymodel.jsonwebtokens.7.5.1.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.identitymodel.logging/7.5.1/microsoft.identitymodel.logging.7.5.1.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.identitymodel.tokens/7.5.1/microsoft.identitymodel.tokens.7.5.1.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/system.identitymodel.tokens.jwt/7.5.1/system.identitymodel.tokens.jwt.7.5.1.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.23/microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.23/microsoft.netcore.app.host.osx-arm64.8.0.23.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.netcore.app.ref/8.0.23/microsoft.netcore.app.ref.8.0.23.nupkg.sha512"
+  ],
+  "logs": []
+}

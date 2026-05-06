@@ -40,4 +40,26 @@ public class AnalyticsController(AnalyticsAppService analyticsService, ICurrentU
         var result = await analyticsService.GetPlatformStatsAsync(days, ct);
         return Ok(result.Value);
     }
+
+    [HttpGet("platform/export")]
+    [Authorize(Roles = "Admin")]
+    [ProducesResponseType(typeof(FileResult), StatusCodes.Status200OK)]
+    public async Task<IActionResult> ExportPlatformStats([FromQuery] int days = 30, [FromQuery] string format = "pdf", CancellationToken ct = default)
+    {
+        var result = await analyticsService.GetPlatformStatsAsync(days, ct);
+        if (!result.IsSuccess) return BadRequest();
+
+        var generator = new ReportGenerator();
+        
+        if (format.Equals("csv", StringComparison.OrdinalIgnoreCase))
+        {
+            var csvResult = generator.GeneratePlatformStatsCsv(result.Value);
+            return File(csvResult.Value, "text/csv", $"platform_stats_{DateTime.Now:yyyyMMdd}.csv");
+        }
+        else
+        {
+            var pdfResult = generator.GeneratePlatformStatsPdf(result.Value);
+            return File(pdfResult.Value, "application/pdf", $"platform_stats_{DateTime.Now:yyyyMMdd}.pdf");
+        }
+    }
 }

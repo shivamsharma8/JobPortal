@@ -348,7 +348,8 @@
         "dependencies": {
           "BuildingBlocks.Common": "1.0.0",
           "BuildingBlocks.Contracts": "1.0.0",
-          "JobService.Domain": "1.0.0"
+          "JobService.Domain": "1.0.0",
+          "Microsoft.Extensions.Caching.Abstractions": "8.0.0"
         },
         "runtime": {
           "JobService.Application.dll": {

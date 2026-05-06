@@ -1,0 +1,60 @@
+name: HireConnect CD
+
+on:
+  push:
+    branches: [ "main" ]
+    tags: [ 'v*.*.*' ]
+
+jobs:
+  docker-build-push:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and push Auth Service
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: src/Services/AuthService/AuthService.API/Dockerfile
+        push: true
+        tags: hireconnect/auth-service:latest,hireconnect/auth-service:${{ github.sha }}
+
+    - name: Build and push Gateway
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: src/Gateway/HireConnect.Gateway/Dockerfile
+        push: true
+        tags: hireconnect/gateway:latest,hireconnect/gateway:${{ github.sha }}
+        
+    # Additional services would follow the same pattern here
+    
+  deploy-to-k8s:
+    needs: docker-build-push
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    # Stub: Normally you would configure kubectl here to point to your cluster
+    # - name: Set up Kubernetes config
+    #   uses: azure/k8s-set-context@v2
+    #   with:
+    #     method: kubeconfig
+    #     kubeconfig: ${{ secrets.KUBECONFIG }}
+    
+    - name: Apply Kubernetes manifests
+      run: |
+        echo "Applying manifests..."
+        # kubectl apply -f k8s/

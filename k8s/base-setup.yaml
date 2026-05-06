@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hireconnect
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: hireconnect-secrets
+  namespace: hireconnect
+type: Opaque
+stringData:
+  # Base64 values for production
+  auth-db-connection: "Host=postgres;Port=5432;Database=auth_db;Username=hireconnect;Password=hireconnect_secret;"
+  jwt-secret: "HireConnect_SuperSecretKey_Must_Be_At_Least_32_Chars!"

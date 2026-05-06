@@ -25,6 +25,12 @@ builder.Services.AddDbContext<JobDbContext>(options =>
         builder.Configuration.GetConnectionString("JobDb"),
         npgsql => npgsql.MigrationsAssembly("JobService.Infrastructure")));
 
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    options.InstanceName = "JobService_";
+});
+
 builder.Services.AddScoped<IJobRepository, JobRepository>();
 builder.Services.AddScoped<IJobCategoryRepository, JobCategoryRepository>();
 builder.Services.AddScoped<IJobUnitOfWork, JobUnitOfWork>();

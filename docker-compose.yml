@@ -260,6 +260,22 @@ services:
       - hireconnect-net
     restart: unless-stopped
 
+  web:
+    build:
+      context: .
+      dockerfile: src/Web/HireConnect.Web/Dockerfile
+    container_name: hireconnect-web
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - GatewayUrl=http://gateway:5000
+    ports:
+      - "5020:5020"
+    depends_on:
+      - gateway
+    networks:
+      - hireconnect-net
+    restart: unless-stopped
+
 # ─── Volumes ──────────────────────────────────────────────────────────────────
 volumes:
   postgres_data:

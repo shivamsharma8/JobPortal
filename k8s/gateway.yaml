@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway
+  namespace: hireconnect
+  labels:
+    app: gateway
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gateway
+  template:
+    metadata:
+      labels:
+        app: gateway
+    spec:
+      containers:
+      - name: gateway
+        image: hireconnect/gateway:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Production"
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway
+  namespace: hireconnect
+spec:
+  type: LoadBalancer
+  selector:
+    app: gateway
+  ports:
+  - port: 80
+    targetPort: 5000

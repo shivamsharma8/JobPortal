@@ -289,3 +289,9 @@
 /Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/obj/Debug/net8.0/JobService.API.pdb
 /Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/obj/Debug/net8.0/JobService.API.genruntimeconfig.cache
 /Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/obj/Debug/net8.0/ref/JobService.API.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/bin/Debug/net8.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.API/bin/Debug/net8.0/StackExchange.Redis.dll

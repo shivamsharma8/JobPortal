@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ks41PIl1ACM=",
+  "dgSpecHash": "3LGkbHXmTos=",
   "success": true,
   "projectFilePath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Infrastructure/AnalyticsService.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "/Users/shivamsharma/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.4/npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/questpdf/2024.3.4/questpdf.2024.3.4.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/rabbitmq.client/6.8.1/rabbitmq.client.6.8.1.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",

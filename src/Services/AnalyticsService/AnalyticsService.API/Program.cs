@@ -23,6 +23,12 @@ builder.Services.AddDbContext<AnalyticsDbContext>(options =>
         builder.Configuration.GetConnectionString("AnalyticsDb"),
         npgsql => npgsql.MigrationsAssembly("AnalyticsService.Infrastructure")));
 
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    options.InstanceName = "AnalyticsService_";
+});
+
 builder.Services.AddScoped<IJobStatRepository, JobStatRepository>();
 builder.Services.AddScoped<IPlatformStatRepository, PlatformStatRepository>();
 builder.Services.AddScoped<IAnalyticsUnitOfWork, AnalyticsUnitOfWork>();

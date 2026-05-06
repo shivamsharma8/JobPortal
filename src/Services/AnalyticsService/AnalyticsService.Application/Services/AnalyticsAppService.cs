@@ -1,3 +1,5 @@
+using System.Text.Json;
+using Microsoft.Extensions.Caching.Distributed;
 using AnalyticsService.Application.DTOs;
 using AnalyticsService.Domain.Entities;
 using AnalyticsService.Domain.Repositories;
@@ -8,7 +10,8 @@ namespace AnalyticsService.Application.Services;
 public class AnalyticsAppService(
     IJobStatRepository jobStatRepository,
     IPlatformStatRepository platformStatRepository,
-    IAnalyticsUnitOfWork unitOfWork)
+    IAnalyticsUnitOfWork unitOfWork,
+    Microsoft.Extensions.Caching.Distributed.IDistributedCache cache)
 {
     public async Task<Result<JobStatResponse>> GetJobStatsAsync(
         Guid jobId, Guid recruiterId, CancellationToken ct = default)
@@ -43,8 +46,23 @@ public class AnalyticsAppService(
     public async Task<Result<IReadOnlyList<PlatformStatResponse>>> GetPlatformStatsAsync(
         int days, CancellationToken ct = default)
     {
+        var cacheKey = $"platform_stats_{days}";
+        var cachedData = await cache.GetStringAsync(cacheKey, ct);
+        if (!string.IsNullOrEmpty(cachedData))
+        {
+            return Result.Success(JsonSerializer.Deserialize<IReadOnlyList<PlatformStatResponse>>(cachedData)!);
+        }
+
         var stats = await platformStatRepository.GetRecentAsync(days, ct);
-        return Result.Success(stats.Select(MapPlatform).ToList() as IReadOnlyList<PlatformStatResponse>);
+        var response = stats.Select(MapPlatform).ToList() as IReadOnlyList<PlatformStatResponse>;
+
+        await cache.SetStringAsync(
+            cacheKey, 
+            JsonSerializer.Serialize(response), 
+            new Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions { AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10) }, 
+            ct);
+
+        return Result.Success(response);
     }
 
     // ── Called by the consumer worker ────────────────────────────────────────

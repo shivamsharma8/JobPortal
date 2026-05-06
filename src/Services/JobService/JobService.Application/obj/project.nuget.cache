@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8ND+wdkKUPs=",
+  "dgSpecHash": "Hs0yUox8tZ8=",
   "success": true,
   "projectFilePath": "/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/JobService/JobService.Application/JobService.Application.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/shivamsharma/.nuget/packages/masstransit.rabbitmq/8.2.3/masstransit.rabbitmq.8.2.3.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/microsoft.extensions.diagnostics.abstractions/8.0.0/microsoft.extensions.diagnostics.abstractions.8.0.0.nupkg.sha512",
@@ -26,8 +27,8 @@
     "/Users/shivamsharma/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512",
     "/Users/shivamsharma/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512",
-    "/Users/shivamsharma/.nuget/packages/microsoft.netcore.app.ref/8.0.23/microsoft.netcore.app.ref.8.0.23.nupkg.sha512",
-    "/Users/shivamsharma/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.23/microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512"
+    "/Users/shivamsharma/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.23/microsoft.aspnetcore.app.ref.8.0.23.nupkg.sha512",
+    "/Users/shivamsharma/.nuget/packages/microsoft.netcore.app.ref/8.0.23/microsoft.netcore.app.ref.8.0.23.nupkg.sha512"
   ],
   "logs": []
 }
