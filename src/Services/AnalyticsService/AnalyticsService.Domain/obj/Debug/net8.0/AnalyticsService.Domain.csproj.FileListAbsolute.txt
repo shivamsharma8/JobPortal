@@ -1,0 +1,16 @@
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/bin/Debug/net8.0/AnalyticsService.Domain.deps.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/bin/Debug/net8.0/AnalyticsService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/bin/Debug/net8.0/AnalyticsService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.sourcelink.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/Analytic.2640BDE6.Up2Date
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/refint/AnalyticsService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/AnalyticsService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/AnalyticsService/AnalyticsService.Domain/obj/Debug/net8.0/ref/AnalyticsService.Domain.dll

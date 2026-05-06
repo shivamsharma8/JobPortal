@@ -1,0 +1,16 @@
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/bin/Debug/net8.0/SubscriptionService.Domain.deps.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/bin/Debug/net8.0/SubscriptionService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/bin/Debug/net8.0/SubscriptionService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/bin/Debug/net8.0/BuildingBlocks.Common.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.csproj.AssemblyReference.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.AssemblyInfoInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.AssemblyInfo.cs
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.csproj.CoreCompileInputs.cache
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.sourcelink.json
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/Subscrip.308312BA.Up2Date
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/refint/SubscriptionService.Domain.dll
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/SubscriptionService.Domain.pdb
+/Users/shivamsharma/Desktop/JobPortalFounder/JobPortal/src/Services/SubscriptionService/SubscriptionService.Domain/obj/Debug/net8.0/ref/SubscriptionService.Domain.dll
