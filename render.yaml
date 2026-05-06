@@ -68,7 +68,8 @@ services:
           name: hireconnect-db
           property: connectionString
       - key: ConnectionStrings__Redis
-        fromRedis:
+        fromService:
+          type: redis
           name: hireconnect-redis
           property: connectionString
       - key: RabbitMq__Hostname
@@ -140,7 +141,8 @@ services:
           name: hireconnect-db
           property: connectionString
       - key: ConnectionStrings__Redis
-        fromRedis:
+        fromService:
+          type: redis
           name: hireconnect-redis
           property: connectionString
       - key: RabbitMq__Hostname
