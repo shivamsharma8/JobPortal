@@ -16,7 +16,7 @@ services:
     ipAllowList: []
 
   # RabbitMQ (Private Service - no public port required)
-  - type: pvtserver
+  - type: pserv
     name: rabbitmq
     env: docker
     dockerfilePath: Dockerfile.rabbitmq
