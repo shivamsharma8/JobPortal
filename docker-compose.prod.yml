@@ -1,0 +1,75 @@
+# Production Overrides for Docker Compose
+# Used by the AWS CloudFormation setup to limit resource usage and ensure stability on Free Tier
+services:
+  postgres:
+    # Limit memory to prevent OOM kills on 1GB instances
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  redis:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  rabbitmq:
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  gateway:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  web:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  # Limit all APIs to 128M to prevent crashing the server
+  auth-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+  profile-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+  job-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+  application-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+  interview-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+  notification-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+  subscription-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+  analytics-service:
+    deploy:
+      resources:
+        limits:
+          memory: 128M

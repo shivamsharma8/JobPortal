@@ -1,0 +1,100 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'HireConnect Evaluation Deployment - Single EC2 Instance with Docker Compose'
+
+Parameters:
+  InstanceType:
+    Description: EC2 instance type (t3.micro is free tier eligible in most regions)
+    Type: String
+    Default: t3.micro
+    AllowedValues:
+      - t2.micro
+      - t3.micro
+      - t3.small
+      - t3.medium
+  GitHubRepoURL:
+    Description: The public GitHub repository URL to clone the code from
+    Type: String
+    Default: 'https://github.com/shivamsharma8/JobPortal.git'
+  GitHubBranch:
+    Description: The branch to checkout
+    Type: String
+    Default: 'feature/UC-WebLayerAndAdmin' # Pointing to your current branch
+
+Resources:
+  # Security Group to allow HTTP (80, 5010, 5020) and SSH (22) access
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTP and SSH access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 5010
+          ToPort: 5010
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 5020
+          ToPort: 5020
+          CidrIp: 0.0.0.0/0
+
+  # The EC2 Instance
+  WebServerInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      SecurityGroups:
+        - !Ref WebServerSecurityGroup
+      # Amazon Linux 2023 AMI (x86_64) - Recommended for Docker
+      ImageId: !Sub '{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-x86_64}}'
+      Tags:
+        - Key: Name
+          Value: HireConnect-Evaluation
+      
+      # Initialization Script (Runs on first boot)
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          # 1. Update and install dependencies
+          dnf update -y
+          dnf install -y git docker htop
+
+          # 2. Setup 4GB Swap File (CRITICAL FOR FREE TIER 1GB RAM)
+          fallocate -l 4G /swapfile
+          chmod 600 /swapfile
+          mkswap /swapfile
+          swapon /swapfile
+          echo '/swapfile none swap sw 0 0' >> /etc/fstab
+
+          # 3. Start Docker Service
+          systemctl start docker
+          systemctl enable docker
+          usermod -aG docker ec2-user
+
+          # 4. Install Docker Compose plugin
+          mkdir -p /usr/local/lib/docker/cli-plugins
+          curl -SL https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+          chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+
+          # 5. Clone the Repository
+          cd /home/ec2-user
+          git clone -b ${GitHubBranch} ${GitHubRepoURL} app
+          chown -R ec2-user:ec2-user app
+          cd app
+
+          # 6. Start the Application using the production override
+          docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+
+Outputs:
+  WebUIUrl:
+    Description: URL to access the Web UI
+    Value: !Sub 'http://${WebServerInstance.PublicDnsName}:5020'
+  GatewayUrl:
+    Description: URL to access the API Gateway
+    Value: !Sub 'http://${WebServerInstance.PublicDnsName}:5010'
