@@ -33,6 +33,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/AuthService/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -53,6 +54,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/ProfileService/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -69,6 +71,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/JobService/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -92,6 +95,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/ApplicationService/ApplicationService.API/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -110,6 +114,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/InterviewService/InterviewService.API/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -128,6 +133,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/NotificationService/NotificationService.API/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -146,6 +152,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/SubscriptionService/SubscriptionService.API/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -162,6 +169,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Services/AnalyticsService/AnalyticsService.API/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
@@ -185,6 +193,7 @@ services:
     dockerContext: .
     dockerfilePath: src/Gateway/HireConnect.Gateway/Dockerfile
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 5000
