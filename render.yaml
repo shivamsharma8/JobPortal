@@ -31,7 +31,7 @@ services:
     name: auth-service
     env: docker
     dockerContext: .
-    dockerfilePath: src/Services/AuthService/AuthService.API/Dockerfile
+    dockerfilePath: src/Services/AuthService/Dockerfile
     plan: free
     envVars:
       - key: PORT
@@ -49,7 +49,7 @@ services:
     name: profile-service
     env: docker
     dockerContext: .
-    dockerfilePath: src/Services/ProfileService/ProfileService.API/Dockerfile
+    dockerfilePath: src/Services/ProfileService/Dockerfile
     plan: free
     envVars:
       - key: PORT
@@ -63,7 +63,7 @@ services:
     name: job-service
     env: docker
     dockerContext: .
-    dockerfilePath: src/Services/JobService/JobService.API/Dockerfile
+    dockerfilePath: src/Services/JobService/Dockerfile
     plan: free
     envVars:
       - key: PORT
