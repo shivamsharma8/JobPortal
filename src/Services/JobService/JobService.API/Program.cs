@@ -22,7 +22,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<JobDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("JobDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("JobDb")),
         npgsql => npgsql.MigrationsAssembly("JobService.Infrastructure")));
 
 builder.Services.AddStackExchangeRedisCache(options =>
@@ -73,7 +73,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("JobDb")!);
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("JobDb"))!);
 
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowGateway", p =>

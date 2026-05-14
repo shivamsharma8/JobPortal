@@ -25,7 +25,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<InterviewDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("InterviewDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("InterviewDb")),
         npgsql => npgsql.MigrationsAssembly("InterviewService.Infrastructure")));
 
 builder.Services.AddScoped<IInterviewRepository, InterviewRepository>();
@@ -70,7 +70,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("InterviewDb")!);
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("InterviewDb"))!);
 
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowGateway", p =>

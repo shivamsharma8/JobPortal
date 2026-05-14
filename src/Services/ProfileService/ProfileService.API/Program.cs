@@ -22,7 +22,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<ProfileDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("ProfileDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("ProfileDb")),
         npgsql => npgsql.MigrationsAssembly("ProfileService.Infrastructure")));
 
 builder.Services.AddScoped<ICandidateProfileRepository, CandidateProfileRepository>();
@@ -67,7 +67,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("ProfileDb")!);
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("ProfileDb"))!);
 
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowGateway", p =>

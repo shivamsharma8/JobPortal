@@ -27,7 +27,7 @@ builder.Host.UseSerilog();
 // ─── Database ─────────────────────────────────────────────────────────────────
 builder.Services.AddDbContext<AuthDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("AuthDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("AuthDb")),
         npgsql => npgsql.MigrationsAssembly("AuthService.Infrastructure")));
 
 // ─── Repositories & UoW ───────────────────────────────────────────────────────
@@ -91,7 +91,7 @@ builder.Services.AddSwaggerGen(c =>
 
 // ─── Health Checks ────────────────────────────────────────────────────────────
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("AuthDb")!)
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("AuthDb"))!)
     .AddRedis(builder.Configuration.GetConnectionString("Redis")!);
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────

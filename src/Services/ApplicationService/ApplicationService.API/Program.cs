@@ -25,7 +25,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("ApplicationDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("ApplicationDb")),
         npgsql => npgsql.MigrationsAssembly("ApplicationService.Infrastructure")));
 
 builder.Services.AddScoped<IApplicationRepository, ApplicationRepository>();
@@ -70,7 +70,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("ApplicationDb")!);
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("ApplicationDb"))!);
 
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowGateway", p =>

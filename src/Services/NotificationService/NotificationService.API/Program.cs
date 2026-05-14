@@ -20,7 +20,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<NotificationDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("NotificationDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("NotificationDb")),
         npgsql => npgsql.MigrationsAssembly("NotificationService.Infrastructure")));
 
 builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
@@ -59,7 +59,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("NotificationDb")!);
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("NotificationDb"))!);
 
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowGateway", p =>

@@ -20,7 +20,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<AnalyticsDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("AnalyticsDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("AnalyticsDb")),
         npgsql => npgsql.MigrationsAssembly("AnalyticsService.Infrastructure")));
 
 builder.Services.AddStackExchangeRedisCache(options =>
@@ -71,7 +71,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("AnalyticsDb")!);
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("AnalyticsDb"))!);
 
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowGateway", p =>

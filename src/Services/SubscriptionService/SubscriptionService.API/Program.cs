@@ -22,7 +22,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<SubscriptionDbContext>(options =>
     options.UseNpgsql(
-        builder.Configuration.GetConnectionString("SubscriptionDb"),
+        BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("SubscriptionDb")),
         npgsql => npgsql.MigrationsAssembly("SubscriptionService.Infrastructure")));
 
 builder.Services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
@@ -59,7 +59,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddNpgSql(builder.Configuration.GetConnectionString("SubscriptionDb")!);
+    .AddNpgSql(BuildingBlocks.Common.Extensions.ConnectionStringParser.ParseUrlToNpgsql(builder.Configuration.GetConnectionString("SubscriptionDb"))!);
 
 builder.Services.AddCors(o =>
     o.AddPolicy("AllowGateway", p =>
