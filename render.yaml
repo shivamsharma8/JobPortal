@@ -36,6 +36,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__AuthDb
         fromDatabase:
           name: hireconnect-db
@@ -54,6 +56,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__ProfileDb
         fromDatabase:
           name: hireconnect-db
@@ -68,6 +72,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__JobDb
         fromDatabase:
           name: hireconnect-db
@@ -89,6 +95,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__ApplicationDb
         fromDatabase:
           name: hireconnect-db
@@ -105,6 +113,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__InterviewDb
         fromDatabase:
           name: hireconnect-db
@@ -121,6 +131,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__NotificationDb
         fromDatabase:
           name: hireconnect-db
@@ -137,6 +149,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__SubscriptionDb
         fromDatabase:
           name: hireconnect-db
@@ -151,6 +165,8 @@ services:
     envVars:
       - key: PORT
         value: 8080
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ConnectionStrings__AnalyticsDb
         fromDatabase:
           name: hireconnect-db
@@ -172,6 +188,8 @@ services:
     envVars:
       - key: PORT
         value: 5000
+      - key: DOTNET_gcServer
+        value: "0"
       - key: ReverseProxy__Clusters__auth-cluster__Destinations__destination1__Address
         value: http://auth-service:8080
       - key: ReverseProxy__Clusters__profile-cluster__Destinations__destination1__Address
